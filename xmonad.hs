@@ -1,0 +1,1 @@
+/home/mcrittenden/.xmonad/xmonad.hs
