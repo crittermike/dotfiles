@@ -1,1 +1,17 @@
-/home/mcrittenden/.xmobarrc
+Config { font = "xft:Sans-9:bold"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 94
+       , lowerOnStart = False
+       , commands = [ Run Weather "KGMU" ["-t","<tempF>F","-L","40","-H","80","--normal","green","--high","yellow","--low","lightblue"] 18000
+                    , Run Network "wlan0" ["-t", "Net: <rx> in, <tx> out", "-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Cpu ["-t", "CPU: <total>", "-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Memory: <usedratio>%"] 10
+                    , Run Battery ["-t","Battery: <left>"] 10
+                    , Run Date "%a, %b %_d, %Y %H:%M:%S " "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %wlan0% | %battery% | Temp: %KGMU% | <fc=#ee9a00>%date%</fc>"
+       }

@@ -1,1 +1,1 @@
-/home/mcrittenden/.ackrc
+--type-set=drupal=.php,.inc,.module,.install,.info,.engine
