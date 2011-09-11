@@ -1,3 +1,37 @@
+set nocompatible
+filetype off
+
+" Vundle commands - Vim plugin management
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: Comments after Bundle command are not allowed..
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" GitHub repos
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'wincent/Command-T'
+Bundle 'Townk/vim-autoclose'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/zencoding-vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/molokai'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'vim-scripts/php.vim-html-enhanced'
+
+filetype plugin indent on
+
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
 
@@ -86,10 +120,6 @@ map <C-l> :tabnext<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Map F9 to toggle the taglist sidebar
-noremap <F9> :TlistToggle<CR>
-inoremap <F9> :TlistToggle<CR>
-
 " Map F1 to Esc instead of the stupid help crap.
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -128,11 +158,6 @@ map <up> O<Esc>
 set t_Co=256
 colorscheme molokai
 
-" Set custom colors for the Indent Guides plugin.
-let g:indent_guides_auto_colors = 0 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=233 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=234 
-
 " Set options for Zen Coding
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
@@ -168,5 +193,10 @@ set statusline+=%*
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" Configure vim-gist
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+
 " Enable the HTML closetag plugin
-au Filetype html,xml,php source ~/.vim/scripts/closetag.vim 
+au Filetype html,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
