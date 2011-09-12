@@ -39,6 +39,7 @@ alias gdh='git diff --word-diff --color=always HEAD'
 alias ga='git add'
 alias gpl='git pull'
 alias gcp='git cherry-pick'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gcpn='git cherry-pick -n'
 alias ack='ack-grep --literal --smart-case'
 alias sch='scheme-r5rs'
