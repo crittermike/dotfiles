@@ -19,8 +19,8 @@ Bundle 'gmarik/vundle'
 " GitHub repos
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'wincent/Command-T'
 Bundle 'Townk/vim-autoclose'
+Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'edsono/vim-matchit'
@@ -29,8 +29,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/molokai'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
-
-filetype plugin indent on
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -162,23 +160,12 @@ colorscheme molokai
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
 
-" Map <Tab> to C-x C-o to open omnicomplete popup, but only if there is text
-" to complete. Otherwise, just do a normal tab.
-function! TabAutocomplete()
-  if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    if &omnifunc != ''
-      return "\<C-X>\<C-O>"
-    elseif &dictionary != ''
-      return "\<C-K>"
-    else
-      return "\<C-N>"
-    endif
-  endif
-endfunction
-
-inoremap <Tab> <C-R>=TabAutocomplete()<cr>
+" Set options for ctrlp.vim
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_persistent_input = 0
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
