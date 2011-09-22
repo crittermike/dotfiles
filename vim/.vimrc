@@ -42,7 +42,7 @@ set tabstop=2 " Number of spaces to use for tabs.
 set shiftwidth=2 " Number of spaces to autoindent.
 set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
-" set smartindent " Automatically insert another level of indent when needed. 
+set smartindent " Automatically insert another level of indent when needed. 
 
 " Set tab width to 4 spaces for python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4

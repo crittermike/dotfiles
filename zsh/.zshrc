@@ -25,7 +25,7 @@ ZSH_THEME="flarp"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode django command-not-found pip)
+plugins=(git vi-mode django pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,7 +41,7 @@ alias gpl='git pull'
 alias gcp='git cherry-pick'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gcpn='git cherry-pick -n'
-alias ack='ack-grep --literal --smart-case'
+alias ack='ack --literal --smart-case'
 alias sch='scheme-r5rs'
 alias sshd='ssh mcrittenden@iade106lmp01.blackmesh.com -p 9567'
 alias sshp='ssh iade106@iade106lwb01.blackmesh.com -p 9567'

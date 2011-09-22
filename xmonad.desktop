@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=XMonad/Gnome
-Comment=Lightweight tiling window manager
-Exec=gnome-session --session=xmonad
-Icon=xmonad.png
-Type=XSession
-X-Ubuntu-Gettext-Domain=gnome-session-2.0

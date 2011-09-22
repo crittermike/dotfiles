@@ -1,7 +1,0 @@
-[GNOME Session]
-Name=Xmonad
-Required=windowmanager;panel;filemanager;
-Required-windowmanager=xmonad
-Required-panel=gnome-panel
-Required-filemanager=nautilus
-DefaultApps=gnome-settings-daemon;
