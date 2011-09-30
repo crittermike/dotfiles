@@ -134,7 +134,7 @@ inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 imap {% {%<Space><Space>%}<Esc>hhi
 imap {{ {{<Space><Space>}}<Esc>hhi
 
-" Make jj exist insert mode (since it's almost never typed normally).
+" Make jj exit insert mode (since it's almost never typed normally).
 inoremap jj <Esc>
 
 " Disable arrow keys
