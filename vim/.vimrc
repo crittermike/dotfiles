@@ -26,6 +26,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/molokai'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
@@ -135,7 +136,7 @@ imap {% {%<Space><Space>%}<Esc>hhi
 imap {{ {{<Space><Space>}}<Esc>hhi
 
 " Make jj exit insert mode (since it's almost never typed normally).
-inoremap jj <Esc>
+imap jj <Esc>
 
 " Disable arrow keys
 map <up> <nop>
