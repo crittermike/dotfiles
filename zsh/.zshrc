@@ -39,6 +39,7 @@ alias sshd='ssh mcrittenden@iade106lmp01.blackmesh.com -p 9567'
 alias sshp='ssh iade106@iade106lwb01.blackmesh.com -p 9567'
 alias pm='python manage.py'
 alias pmr='python manage.py runserver'
+alias up='sudo packer -Syu'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward

@@ -136,7 +136,7 @@ imap {% {%<Space><Space>%}<Esc>hhi
 imap {{ {{<Space><Space>}}<Esc>hhi
 
 " Make jj exit insert mode (since it's almost never typed normally).
-imap jj <Esc>
+imap jj <Esc>:w<CR>
 
 " Disable arrow keys
 map <up> <nop>
