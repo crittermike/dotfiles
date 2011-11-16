@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="flarp"
 
@@ -40,6 +40,7 @@ alias sshp='ssh iade106@iade106lwb01.blackmesh.com -p 9567'
 alias pm='python manage.py'
 alias pmr='python manage.py runserver'
 alias up='sudo packer -Syu'
+alias c='clear'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward

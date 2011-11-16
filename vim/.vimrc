@@ -88,6 +88,8 @@ set wildmode=longest,list " File and directory matching mode.
 
 set nrformats=hex " Allow incrementing and decrementing numbers that start with 0 using <c-a> and <c-x>
 
+set clipboard=unnamedplus,autoselect " Use + register (X Window clipboard) as unnamed register"
+
 syntax on " Syntax highlighting on.
 
 " Drupal command group, set the correct filetypes for Drupal files.
