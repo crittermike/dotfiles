@@ -41,6 +41,7 @@ alias pm='python manage.py'
 alias pmr='python manage.py runserver'
 alias up='sudo packer -Syu'
 alias c='clear'
+alias feh='feh -ZF'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
