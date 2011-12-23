@@ -26,10 +26,12 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/molokai'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
+Bundle 'vim-scripts/VimClojure'
+Bundle 'Lokaltog/vim-easymotion'
+
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -186,7 +188,10 @@ let g:syntastic_auto_loc_list=1
 " Configure vim-gist
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
 
 " Enable the HTML closetag plugin
 au Filetype html,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+
+" Stuff for VimClojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
