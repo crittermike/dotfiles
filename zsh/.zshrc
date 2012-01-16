@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
+export VIMCLOJURE_SERVER_JAR="$HOME/Misc/server-2.3.1.jar"
 
 ZSH_THEME="flarp"
 

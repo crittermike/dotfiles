@@ -123,6 +123,11 @@ map <C-l> :tabnext<CR>
 nnoremap j gj
 nnoremap k gk
 
+nmap <Leader>el <LocalLeader>el
+nmap <Leader>ef <LocalLeader>ef
+nmap <Leader>es <LocalLeader>es
+nmap <Leader>ee <LocalLeader>p
+
 " Map F1 to Esc instead of the stupid help crap.
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -195,3 +200,4 @@ au Filetype html,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 " Stuff for VimClojure
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
+let vimclojure#WantNailgun = 1
