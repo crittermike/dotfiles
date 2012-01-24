@@ -31,6 +31,7 @@ Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'altercation/vim-colors-solarized'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -163,7 +164,9 @@ map <up> O<Esc>
 
 " Set color scheme (t_Co=256 is necessary for 256 color terminals to work).
 set t_Co=256
-colorscheme molokai
+" colorscheme molokai
+set background=dark
+colorscheme solarized
 
 " Set options for Zen Coding
 let g:user_zen_expandabbr_key = '<c-e>'
