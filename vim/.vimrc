@@ -32,7 +32,6 @@ Bundle 'vim-scripts/php.vim-html-enhanced'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'Lokaltog/vim-easymotion'
 
-
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
 
@@ -176,12 +175,6 @@ let g:ctrlp_dotfiles = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_persistent_input = 0
-
-" If you prefer the Omni-Completion tip window to close when a selection is
-" made, these lines close it on movement in insert mode or when leaving
-" insert mode.
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Configure the Syntastic plugin for automatic syntax checking.
 set statusline+=%#warningmsg#
