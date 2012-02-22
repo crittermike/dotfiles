@@ -22,6 +22,7 @@ ZSH_THEME="flarp"
 plugins=(git vi-mode django pip)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.rvm/scripts/rvm
 
 alias gp='git push'
 alias gc='git commit -m'
@@ -48,3 +49,5 @@ bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 source /etc/profile
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

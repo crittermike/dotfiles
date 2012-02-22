@@ -27,17 +27,23 @@ Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'mikecrittenden/molokai'
-Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'nono/vim-handlebars'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
 
 " Use vim defaults.
 set nocompatible
+
+" A couple options to make vim-powerline work correctly.
+set laststatus=2
+let g:Powerline_symbols = 'compatible'
 
 " Tabs, Spaces and Indentation.
 set expandtab " Use spaces for tabs.
@@ -58,10 +64,8 @@ set number " Line numbers on.
 set showcmd " Shows the command in the last line of the screen.
 set autoread " Read files when they've been changed outside of Vim.
 
-" Bells and whistles.
-set novisualbell
+" Disable the bell
 set noerrorbells
-set t_vb=
 
 set history=1000 " Number of command lines stored in the history tables.
 set undolevels=1000 " Number of levels of undo
@@ -90,8 +94,6 @@ set wildmode=longest,list " File and directory matching mode.
 
 set nrformats=hex " Allow incrementing and decrementing numbers that start with 0 using <c-a> and <c-x>
 
-set clipboard=unnamedplus,autoselect " Use + register (X Window clipboard) as unnamed register"
-
 syntax on " Syntax highlighting on.
 
 " Drupal command group, set the correct filetypes for Drupal files.
@@ -110,11 +112,6 @@ autocmd BufRead,BufNewFile *.json set filetype=json
 " Change the leader from \ to , for easier reaching
 let mapleader = ","
 
-" Prevent help popping up catch <F1> instead of <ESC>.
-nmap <F1> <ESC>
-map <F1> <ESC>
-imap <F1> <ESC>
-
 " Map keys to navigate tabs
 map <C-h> :tabprevious<CR>
 map <C-l> :tabnext<CR>
@@ -123,15 +120,11 @@ map <C-l> :tabnext<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Mappings for Vim-Clojure's nailgun server
 nmap <Leader>el <LocalLeader>el
 nmap <Leader>ef <LocalLeader>ef
 nmap <Leader>es <LocalLeader>es
 nmap <Leader>ee <LocalLeader>p
-
-" Map F1 to Esc instead of the stupid help crap.
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
 
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv
@@ -147,24 +140,12 @@ imap {{ {{<Space><Space>}}<Esc>hhi
 " Make jj exit insert mode (since it's almost never typed normally).
 imap jj <Esc>:w<CR>
 
-" Disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
-" Map up/down to insert new line above/below respectively, without entering
-" insert mode.
+" Map up/down to insert new line above/below respectively, without entering insert mode.
 map <down> o<Esc>
 map <up> O<Esc>
 
 " Set color scheme (t_Co=256 is necessary for 256 color terminals to work).
 set t_Co=256
-" colorscheme molokai
 set background=dark
 colorscheme solarized
 
@@ -173,7 +154,6 @@ let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
 
 " Set options for ctrlp.vim
-"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
@@ -197,3 +177,4 @@ au Filetype html,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 let vimclojure#WantNailgun = 1
+
