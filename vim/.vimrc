@@ -133,9 +133,8 @@ vnoremap > >gv
 " Make a curly brace automatically insert an indented line
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 
-" Add auto-expanders for Django template tags
-imap {% {%<Space><Space>%}<Esc>hhi
-imap {{ {{<Space><Space>}}<Esc>hhi
+" Add auto-expander for Handlebars template tags
+imap {{ {{}}<Esc>hi
 
 " Make jj exit insert mode (since it's almost never typed normally).
 imap jj <Esc>:w<CR>
