@@ -37,8 +37,6 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gcpn='git cherry-pick -n'
 alias ack='ack --literal --smart-case'
 alias sch='scheme-r5rs'
-alias sshd='ssh mcrittenden@iade106lmp01.blackmesh.com -p 9567'
-alias sshp='ssh iade106@iade106lwb01.blackmesh.com -p 9567'
 alias pm='python manage.py'
 alias pmr='python manage.py runserver'
 alias up='sudo packer -Syu'
