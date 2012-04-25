@@ -34,6 +34,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'nono/vim-handlebars'
+Bundle 'mileszs/ack.vim'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
