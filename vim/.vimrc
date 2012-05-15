@@ -42,6 +42,9 @@ filetype plugin indent on
 " Use vim defaults.
 set nocompatible
 
+" Set the mouse to use the plain old X mouse.
+set mouse=a
+
 " A couple options to make vim-powerline work correctly.
 set laststatus=2
 let g:Powerline_symbols = 'compatible'
