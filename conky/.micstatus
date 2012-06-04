@@ -1,8 +1,0 @@
-#!/bin/bash
-
-vol=$(amixer get 'Mic',0 | egrep -o '\[on\]')
-if [ "$vol" = "" ]; then
-  echo "off"
-else 
-  echo "on"
-fi

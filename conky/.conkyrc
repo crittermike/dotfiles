@@ -5,4 +5,4 @@ total_run_times 0
 temperature_unit fahrenheit
 use_spacer none
 TEXT
-Up: ${uptime_short} | Batt: ${battery_short} | RAM: $memperc% | CPU: ${cpu}% | Net: ${downspeedf wlan0} | Mic: ${exec ~/.micstatus}
+Up: ${uptime_short} | Batt: ${battery_short} | RAM: $memperc% | CPU: ${cpu}% | Net: ${downspeedf wlan0}
