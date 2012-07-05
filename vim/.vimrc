@@ -21,20 +21,19 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/gist-vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
-Bundle 'mikecrittenden/molokai'
-Bundle 'vim-scripts/php.vim-html-enhanced'
-Bundle 'vim-scripts/VimClojure'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'chrisbra/NrrwRgn'
-Bundle 'nono/vim-handlebars'
 Bundle 'mileszs/ack.vim'
+Bundle 'AndrewRadev/linediff.vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'vim-scripts/php.vim-html-enhanced'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -124,12 +123,6 @@ map <C-l> :tabnext<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Mappings for Vim-Clojure's nailgun server
-nmap <Leader>el <LocalLeader>el
-nmap <Leader>ef <LocalLeader>ef
-nmap <Leader>es <LocalLeader>es
-nmap <Leader>ee <LocalLeader>p
-
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv
 vnoremap > >gv
@@ -172,12 +165,3 @@ let g:syntastic_auto_loc_list=1
 " Configure vim-gist
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
-
-" Enable the HTML closetag plugin
-au Filetype html,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
-
-" Stuff for VimClojure
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-let vimclojure#WantNailgun = 1
-
