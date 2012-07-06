@@ -56,6 +56,9 @@ set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
 set smartindent " Automatically insert another level of indent when needed. 
 
+" Use relative line numbers
+set relativenumber
+
 " Set tab width to 4 spaces for python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
@@ -122,6 +125,9 @@ map <C-l> :tabnext<CR>
 " Cursor doesn't skip wrapped lines with hitting j or k
 nnoremap j gj
 nnoremap k gk
+
+" Ack for the current word when hitting backspace in normal mode.
+nnoremap <SPACE> :Ack! <C-R><C-W><CR>
 
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv
