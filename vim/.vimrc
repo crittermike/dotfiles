@@ -34,6 +34,7 @@ Bundle 'AndrewRadev/linediff.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'vim-scripts/php.vim-html-enhanced'
+Bundle 'maxbrunsfeld/vim-yankstack'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -56,8 +57,8 @@ set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
 set smartindent " Automatically insert another level of indent when needed. 
 
-" Use relative line numbers
-set relativenumber
+" Toggle paste/nopaste using F10
+set pastetoggle=<F10>
 
 " Set tab width to 4 spaces for python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
@@ -65,7 +66,7 @@ autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 " Various.
 set bs=2 " Backspace, this is the same as :set backspace=indent,eol,start.
 set ruler " Show the cursor position.
-set scrolloff=5 " Show 5 lines above/below the cursor when scrolling.
+set scrolloff=10 " Show 10 lines above/below the cursor when scrolling.
 set number " Line numbers on.
 set showcmd " Shows the command in the last line of the screen.
 set autoread " Read files when they've been changed outside of Vim.
@@ -100,6 +101,9 @@ set wildmode=longest,list " File and directory matching mode.
 
 set nrformats=hex " Allow incrementing and decrementing numbers that start with 0 using <c-a> and <c-x>
 
+" Use relative line numbers
+set relativenumber
+
 syntax on " Syntax highlighting on.
 
 " Drupal command group, set the correct filetypes for Drupal files.
@@ -128,6 +132,9 @@ nnoremap k gk
 
 " Ack for the current word when hitting backspace in normal mode.
 nnoremap <SPACE> :Ack! <C-R><C-W><CR>
+
+" Clear highlighted words using Esc when in normal mode
+nnoremap <ESC> :noh<CR><ESC>
 
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv
@@ -171,3 +178,6 @@ let g:syntastic_auto_loc_list=1
 " Configure vim-gist
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
+
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_older_paste
