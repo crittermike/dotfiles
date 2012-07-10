@@ -1,15 +1,7 @@
 set nocompatible
 filetype off
 
-" Vundle commands - Vim plugin management
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: Comments after Bundle command are not allowed..
-
+" Use Vundle to manage plugins and such.
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -60,6 +52,9 @@ set smartindent " Automatically insert another level of indent when needed.
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
 
+" Toggle line number using F11 for easy copying out of vim.
+nnoremap <F2> :set nonumber!<CR>
+
 " Set tab width to 4 spaces for python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
@@ -87,7 +82,7 @@ set splitright " Open new vertical split windows to the right of the current one
 set splitbelow " See above description. Opens new windows below, not above.
 
 " Backup.
-set nobackup " Don't backup files.
+set nobackup
 set nowritebackup
 set noswapfile
 
@@ -103,6 +98,10 @@ set nrformats=hex " Allow incrementing and decrementing numbers that start with 
 
 " Use relative line numbers
 set relativenumber
+
+" Display trailing whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 syntax on " Syntax highlighting on.
 
