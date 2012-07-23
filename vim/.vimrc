@@ -96,6 +96,10 @@ set wildmode=longest,list " File and directory matching mode.
 
 set nrformats=hex " Allow incrementing and decrementing numbers that start with 0 using <c-a> and <c-x>
 
+" Configuration for autocompletion. http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
+set complete=.,b,u,]
+set wildmode=longest,list:longest
+
 " Use relative line numbers
 set relativenumber
 
@@ -133,7 +137,7 @@ nnoremap k gk
 nnoremap <SPACE> :Ack! <C-R><C-W><CR>
 
 " Clear highlighted words using Esc when in normal mode
-nnoremap <ESC> :noh<CR><ESC>
+nnoremap <CR> :noh<CR>
 
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv

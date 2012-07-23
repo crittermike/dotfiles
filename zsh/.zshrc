@@ -19,7 +19,7 @@ ZSH_THEME="flarp"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(git vi-mode django zsh-syntax-highlighting)
+plugins=(git vi-mode django)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.rvm/scripts/rvm
@@ -42,19 +42,12 @@ alias pmr='python manage.py runserver'
 alias up='sudo packer -Syu'
 alias c='clear'
 alias feh='feh -ZF'
-alias mysql='mysql --pager=/usr/bin/less'
+# alias mysql='mysql --pager=/usr/bin/less'
 alias ll='ls -lah'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 source /etc/profile
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
-ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=cyan'
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=cyan'
-ZSH_HIGHLIGHT_STYLES[commandseparator]='underline'
-ZSH_HIGHLIGHT_STYLES[command]='fg=green'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
