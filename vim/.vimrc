@@ -49,6 +49,10 @@ set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
 set smartindent " Automatically insert another level of indent when needed. 
 
+" Highlight the current cursor line and column like a crosshair
+set cursorline
+set cursorcolumn
+
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
 
