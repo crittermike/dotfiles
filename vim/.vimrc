@@ -55,9 +55,10 @@ set cursorcolumn
 
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
+au InsertLeave * set nopaste
 
-" Toggle line number using F11 for easy copying out of vim.
-nnoremap <F2> :set nonumber!<CR>
+" Toggle line number using F2 for easy copying out of vim.
+nnoremap <F2> :set norelativenumber!<CR>
 
 " Set tab width to 4 spaces for python files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4

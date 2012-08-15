@@ -35,7 +35,7 @@ alias gpl='git pull'
 alias gcp='git cherry-pick'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gcpn='git cherry-pick -n'
-alias ack='ack --literal --smart-case'
+alias ack='ack --all --literal --smart-case'
 alias sch='scheme-r5rs'
 alias pm='python manage.py'
 alias pmr='python manage.py runserver'
