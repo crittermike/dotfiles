@@ -51,3 +51,7 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 source /etc/profile
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+eval "$(fasd --init auto)"
+alias v='f -t -e vim -b viminfo'
+alias j='fasd_cd -d'

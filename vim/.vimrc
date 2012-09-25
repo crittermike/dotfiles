@@ -25,17 +25,14 @@ Bundle 'mileszs/ack.vim'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'vim-scripts/php.vim-html-enhanced'
 Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'vim-scripts/php.vim-html-enhanced'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
 
 " Use vim defaults.
 set nocompatible
-
-" Set the mouse to use the plain old X mouse.
-set mouse=a
 
 " A couple options to make vim-powerline work correctly.
 set laststatus=2
@@ -47,11 +44,7 @@ set tabstop=2 " Number of spaces to use for tabs.
 set shiftwidth=2 " Number of spaces to autoindent.
 set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
-set smartindent " Automatically insert another level of indent when needed. 
-
-" Highlight the current cursor line and column like a crosshair
-set cursorline
-set cursorcolumn
+" set smartindent " Automatically insert another level of indent when needed. 
 
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
