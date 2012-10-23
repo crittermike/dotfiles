@@ -118,7 +118,7 @@ augroup drupal
   autocmd BufRead,BufNewFile *.test set filetype=php
 augroup END
 
-autocmd BufRead,BufNewFile *.json set filetype=json 
+autocmd BufRead,BufNewFile *.json set filetype=json
 
 " Change the leader from \ to , for easier reaching
 let mapleader = ","
@@ -130,9 +130,6 @@ map <C-l> :tabnext<CR>
 " Cursor doesn't skip wrapped lines with hitting j or k
 nnoremap j gj
 nnoremap k gk
-
-" Ack for the current word when hitting backspace in normal mode.
-nnoremap <SPACE> :Ack! <C-R><C-W><CR>
 
 " Clear highlighted words using Esc when in normal mode
 nnoremap <CR> :noh<CR>
@@ -147,8 +144,10 @@ inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 " Add auto-expander for Handlebars template tags
 imap {{ {{}}<Esc>hi
 
-" Make jj exit insert mode (since it's almost never typed normally).
+" Make jj and jk and kj  exit insert mode (since it's almost never typed normally).
 imap jj <Esc>:w<CR>
+imap jk <Esc>:w<CR>
+imap kj <Esc>:w<CR>
 
 " Map up/down to insert new line above/below respectively, without entering insert mode.
 map <down> o<Esc>
