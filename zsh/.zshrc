@@ -19,7 +19,7 @@ ZSH_THEME="flarp"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(gitfast vi-mode django)
+plugins=(gitfast vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.rvm/scripts/rvm
@@ -58,3 +58,4 @@ alias j='fasd_cd -d'
 
 export DC_DEV="yup"
 export GIT_PS1_SHOWDIRTYSTATE="yup"
+export GIT_PS1_SHOWUNTRACKEDFILES="yup"
