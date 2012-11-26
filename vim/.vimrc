@@ -44,7 +44,7 @@ set tabstop=2 " Number of spaces to use for tabs.
 set shiftwidth=2 " Number of spaces to autoindent.
 set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
-" set smartindent " Automatically insert another level of indent when needed. 
+" set smartindent " Automatically insert another level of indent when needed.
 
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
@@ -99,7 +99,7 @@ set complete=.,b,u,]
 set wildmode=longest,list:longest
 
 " Use relative line numbers
-set relativenumber
+" set relativenumber
 
 " Display trailing whitespace
 set list
@@ -131,12 +131,23 @@ map <C-l> :tabnext<CR>
 nnoremap j gj
 nnoremap k gk
 
+" <c-j> and <c-k> move by 10 lines at a time
+nmap <C-j> 10j
+nmap <C-k> 10k
+
 " Clear highlighted words using Esc when in normal mode
 nnoremap <CR> :noh<CR>
 
 " Indent as many times as you want in visual mode without losing focus
 vnoremap < <gv
 vnoremap > >gv
+
+" Bind F5 to remove trailing spaces. http://vim.wikia.com/wiki/Remove_unwanted_spaces
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" Map F1 to Esc instead of Help.
+map <F1> <Esc>
+imap <F1> <Esc>
 
 " Make a curly brace automatically insert an indented line
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
@@ -164,9 +175,10 @@ let g:use_zen_complete_tag = 1
 
 " Set options for ctrlp.vim
 let g:ctrlp_dotfiles = 0
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_persistent_input = 0
+let g:ctrlp_clear_cache_on_exit = 0
 
 " Configure the Syntastic plugin for automatic syntax checking.
 set statusline+=%#warningmsg#
