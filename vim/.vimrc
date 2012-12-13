@@ -10,7 +10,6 @@ Bundle 'gmarik/vundle'
 
 " GitHub repos
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/zencoding-vim'
@@ -22,7 +21,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'mileszs/ack.vim'
-Bundle 'AndrewRadev/linediff.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
@@ -134,6 +132,8 @@ nnoremap k gk
 " <c-j> and <c-k> move by 10 lines at a time
 nmap <C-j> 10j
 nmap <C-k> 10k
+vmap <C-j> 10j
+vmap <C-k> 10k
 
 " Clear highlighted words using Esc when in normal mode
 nnoremap <CR> :noh<CR>
