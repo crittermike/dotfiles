@@ -44,6 +44,7 @@ alias c='clear'
 alias feh='feh -ZF'
 # alias mysql='mysql --pager=/usr/bin/less'
 alias ll='ls -lah'
+alias e='dtrx'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward

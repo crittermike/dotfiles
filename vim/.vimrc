@@ -25,6 +25,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'vim-scripts/php.vim-html-enhanced'
+Bundle 'bkad/CamelCaseMotion'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -148,6 +149,9 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " Map F1 to Esc instead of Help.
 map <F1> <Esc>
 imap <F1> <Esc>
+
+" Make backspace delete all whitespace. http://vim.wikia.com/wiki/Whitespace_hungry_backspace/delete
+imap <BS> <Esc>d?\S?e1<CR>i
 
 " Make a curly brace automatically insert an indented line
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
