@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
@@ -176,9 +176,10 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
-" Set options for Zen Coding
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:use_zen_complete_tag = 1
+" Set options for Emmet
+let g:user_emmet_expandabbr_key = '<c-e>'
+let g:use_emmet_complete_tag = 1
+
 
 " Set options for ctrlp.vim
 let g:ctrlp_dotfiles = 0
