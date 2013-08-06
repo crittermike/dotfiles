@@ -25,10 +25,11 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'vim-scripts/php.vim-html-enhanced'
-Bundle 'bkad/CamelCaseMotion'
+Bundle 'sukima/xmledit'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
+filetype plugin on
 
 " Use vim defaults.
 set nocompatible
@@ -43,7 +44,8 @@ set tabstop=2 " Number of spaces to use for tabs.
 set shiftwidth=2 " Number of spaces to autoindent.
 set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
-" set smartindent " Automatically insert another level of indent when needed.
+
+set relativenumber
 
 " Toggle paste/nopaste using F10
 set pastetoggle=<F10>
@@ -118,6 +120,7 @@ augroup drupal
 augroup END
 
 autocmd BufRead,BufNewFile *.json set filetype=json
+autocmd BufRead,BufNewFile *.bones set filetype=javascript
 
 " Change the leader from \ to , for easier reaching
 let mapleader = ","
@@ -190,6 +193,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['html'] }
 
 " Configure vim-gist
 let g:gist_clip_command = 'xclip -selection clipboard'
@@ -197,3 +203,5 @@ let g:gist_detect_filetype = 1
 
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_older_paste
+
+let g:ackprg = 'ag --nogroup --nocolor --column'

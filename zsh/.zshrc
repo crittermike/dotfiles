@@ -34,17 +34,13 @@ alias ga='git add'
 alias gpl='git pull'
 alias gcp='git cherry-pick'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gcpn='git cherry-pick -n'
 alias ack='ack --all --literal --smart-case'
-alias sch='scheme-r5rs'
-alias pm='python manage.py'
-alias pmr='python manage.py runserver'
 alias up='sudo packer -Syu'
 alias c='clear'
 alias feh='feh -ZF'
-# alias mysql='mysql --pager=/usr/bin/less'
 alias ll='ls -lah'
 alias e='dtrx'
+# alias mysql='mysql --pager=/usr/bin/less'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
