@@ -18,7 +18,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'mileszs/ack.vim'
 Bundle 'mattn/webapi-vim'
@@ -34,9 +34,16 @@ filetype plugin on
 " Use vim defaults.
 set nocompatible
 
-" A couple options to make vim-powerline work correctly.
+" A couple options to make vim-airline work correctly.
+let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_enable_branch=1
+let g:airline_branch_empty_message=''
+let g:airline_enable_syntastic=1
+let g:airline_detect_modified=1
+let g:airline_detect_paste=1
+let g:airline_powerline_fonts=0
 set laststatus=2
-let g:Powerline_symbols = 'compatible'
 
 " Tabs, Spaces and Indentation.
 set expandtab " Use spaces for tabs.
