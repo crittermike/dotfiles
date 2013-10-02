@@ -40,7 +40,14 @@ alias c='clear'
 alias feh='feh -ZF'
 alias ll='ls -lah'
 alias e='dtrx'
-# alias mysql='mysql --pager=/usr/bin/less'
+findreplace_function() {
+  find ./ -type f -exec sed -i 's/'$1'/'$2'/' {} \;
+}
+renamereplace_function() {
+  find . -iname "*$1*" -exec rename $1 $2 {} \;
+}
+alias findreplace=findreplace_function
+alias renamereplace=renamereplace_function
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward

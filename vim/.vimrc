@@ -26,6 +26,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'vim-scripts/php.vim-html-enhanced'
 Bundle 'sukima/xmledit'
+Bundle 'scrooloose/nerdtree'
 
 " Set filetype detection on, load plugins and indent.
 filetype plugin indent on
@@ -37,12 +38,11 @@ set nocompatible
 " A couple options to make vim-airline work correctly.
 let g:airline_right_sep=''
 let g:airline_left_sep=''
-let g:airline_enable_branch=1
 let g:airline_branch_empty_message=''
-let g:airline_enable_syntastic=1
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 " Tabs, Spaces and Indentation.
