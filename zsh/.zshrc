@@ -40,6 +40,7 @@ alias c='clear'
 alias feh='feh -ZF'
 alias ll='ls -lah'
 alias e='dtrx'
+alias ag='ag -a'
 findreplace_function() {
   find ./ -type f -exec sed -i 's/'$1'/'$2'/' {} \;
 }
