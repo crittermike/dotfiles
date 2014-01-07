@@ -28,8 +28,10 @@ alias gp='git push'
 alias gc='git commit -m'
 alias gs='git status'
 alias gb='git branch'
-alias gdc='git diff --word-diff --color=always --cached'
-alias gdh='git diff --word-diff --color=always HEAD'
+alias gdc='git diff --color=always --cached'
+alias gdcw='git diff --word-diff --color=always --cached'
+alias gdh='git diff'
+alias gdhw='git diff --word-diff --color=always HEAD'
 alias ga='git add'
 alias gpl='git pull'
 alias gcp='git cherry-pick'
@@ -64,3 +66,4 @@ alias j='fasd_cd -d'
 export DC_DEV="yup"
 export GIT_PS1_SHOWDIRTYSTATE="yup"
 export GIT_PS1_SHOWUNTRACKEDFILES="yup"
+export ETOWAH_WS="/srv/http/etowah"
