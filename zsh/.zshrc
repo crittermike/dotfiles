@@ -4,25 +4,7 @@ export VIMCLOJURE_SERVER_JAR="$HOME/Misc/server-2.3.1.jar"
 
 ZSH_THEME="flarp"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-plugins=(gitfast vi-mode)
-
 source $ZSH/oh-my-zsh.sh
-source $HOME/.rvm/scripts/rvm
 
 alias gp='git push'
 alias gc='git commit -m'
@@ -36,34 +18,40 @@ alias ga='git add'
 alias gpl='git pull'
 alias gcp='git cherry-pick'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias ack='ack --all --literal --smart-case'
+alias ack='ack --literal --smart-case'
 alias up='sudo packer -Syu'
 alias c='clear'
 alias feh='feh -ZF'
 alias ll='ls -lah'
 alias e='dtrx'
 alias ag='ag -a'
-findreplace_function() {
-  find ./ -type f -exec sed -i 's/'$1'/'$2'/' {} \;
-}
-renamereplace_function() {
-  find . -iname "*$1*" -exec rename $1 $2 {} \;
-}
-alias findreplace=findreplace_function
-alias renamereplace=renamereplace_function
+alias dlgit='drush pm-download `basename "$PWD"` --package-handler=git_drupalorg --select --destination=`dirname \`pwd\`` && cd ../`basename "$PWD"` && open http://drupal.org/node/add/project-issue/`basename "$PWD"`'
+
+#alias aggr_dis='drush vset preprocess_css 0 --yes && drush vset preprocess_js 0 --yes && drush cc css-js'
+#alias aggr_en='drush vset preprocess_css 1 --yes && drush vset preprocess_js 1 --yes && drush cc css-js'
 
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 source /etc/profile
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 eval "$(fasd --init auto)"
 alias v='f -t -e vim -b viminfo'
 alias j='fasd_cd -d'
 
-export DC_DEV="yup"
 export GIT_PS1_SHOWDIRTYSTATE="yup"
 export GIT_PS1_SHOWUNTRACKEDFILES="yup"
-export ETOWAH_WS="/srv/http/etowah"
+
+#export PATH=$PATH:/Applications/MAMP/Library/bin
+#export PATH=/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+eval "$(rbenv init -)"
+
+mlsmerge_function() {
+  git checkout release && git up && git merge origin/feature/mlsweb-$1 && git push && git checkout develop && git merge release && git push && git checkout release
+}
+
+alias mlsmerge=mlsmerge_function
+
+eval "$(devtools config)"
